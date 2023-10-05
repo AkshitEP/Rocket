@@ -1,0 +1,236 @@
+:root {
+    --dark-gray: #1c1c1c;
+    --darker-gray: #0f0f0f;
+    --accent-color: red;
+}
+
+@font-face {
+    font-family: 'bruceforever';
+    src: url('bruceforever.ttf')
+}
+
+@font-face {
+    font-family: 'modernwarfare';
+    src: url('modernwarfare.ttf')
+}
+
+@font-face {
+    font-family: 'technorace';
+    src: url('technorace.otf')
+}
+
+@font-face {
+    font-family: 'uncrackedfree';
+    src: url('uncrackedfree.otf')
+}
+
+body {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.dark {
+    background-color: var(--dark-gray);
+    color: white;
+}
+
+.top-bar-wrapper {
+    display: grid;
+    font-family: 'bruceforever';
+    font-size: 2rem;
+    padding: 20px 5px 20px 5px;
+    background-color: var(--darker-gray);
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.top-link-wrapper {
+    display: inline-flex;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-template-columns: auto;
+    align-items: center;
+    width: fit-content;
+}
+
+.top-link {
+    text-decoration: none;
+    color: var(--accent-color);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.top-logo-wrapper {
+    margin-left: 2em;;
+}
+
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+.dashboard-item-wrapper {
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.dashboard-title-wrapper {
+    padding-left: 5rem;
+}
+
+.dashboard-title {
+    font-family: 'modernwarfare';
+    font-size: 6rem;
+    color: var(--accent-color);
+    padding-top: 30%;
+}
+
+.dashboard-subtitle {
+    font-size: 1.5rem;
+    font-family: 'bruceforever';
+}
+
+.dashboard-gaming-mode {
+    font-family: 'technorace';
+    text-align: center;
+    padding-top: 25%;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.dashboard-dnd {
+    display: flex;justify-content: center;
+}
+
+.dashboard-btn {
+    border: 5px solid var(--accent-color);
+    border-radius: 2rem;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'uncrackedfree';
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+.dashboard-foo {
+    font-family: 'modernwarfare';
+    font-size: 1rem;
+    text-align: center;
+    color: var(--accent-color);
+    padding-top: 1rem;
+}
+
+.launchpad-content-wrapper {
+    display: grid;
+    grid-gap: 1em;
+}
+
+.launchpad-game-wrapper {
+    border: 2px solid var(--accent-color);
+    height: auto;
+    width: fit-content;
+    display: inline-block;
+    margin: 1em;
+}
+
+.launchpad-game-name {
+    font-family: 'modernwarfare';
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+
+.customize-title {
+    font-family: 'modernwarfare';
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.customize-form {
+    display: flex;
+    justify-content: center;
+}
+
+.customize-btn {
+    border: 5px solid var(--accent-color);
+    border-radius: 2rem;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'uncrackedfree';
+    font-size: 4rem;
+    padding: 1rem;
+    margin-left: 5rem;
+}
+
+.vibe-title {
+    font-family: 'bruceforever';
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 4rem;
+    color: var(--accent-color);
+}
+
+.vibe-instructions-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.vibe-instructions {
+    font-family: 'technorace';
+    font-size: 1.5rem;
+    text-align: center;
+    width: 60%;
+}
+
+.vibe-time-wrapper {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.vibe-time-desc {
+    text-align: center;
+    width: 70%;
+    font-size: 1.5rem;
+    font-family: 'bruceforever';
+    color: var(--accent-color)
+}
+
+.vibe-form-inp-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.vibe-time-inp {
+    margin: 1rem;
+}
+
+.vibe-btn {
+    border: 5px solid var(--accent-color);
+    border-radius: 2rem;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'uncrackedfree';
+    font-size: 4rem;
+    padding: 1rem;
+    display: block;
+    margin-top: 2rem;
+}
+
+.vibe-score-title {
+    font-family: 'bruceforever';
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 4rem;
+    color: var(--accent-color);
+}

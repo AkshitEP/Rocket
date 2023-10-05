@@ -1,0 +1,27 @@
+{% extends 'template.html' %}
+
+{% block script %}
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        var r = document.querySelector(':root');
+        r.style.setProperty('--accent-color', "{{ clr }}");
+    });
+</script>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="customize-wrapper">
+
+    <div class="customize-title">Set the ~VIBE~</div>
+
+    <form action="setaccent" method="post" class="customize-form">
+        <input type="color" name="color" id="customize-color" value="{{ clr }}">
+        <input type="submit" class="customize-btn" value="Set Color">
+    </form>
+
+</div>
+
+{% endblock %}

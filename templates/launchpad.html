@@ -1,0 +1,27 @@
+{% extends 'template.html' %}
+
+{% block script %}
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        var r = document.querySelector(':root');
+        r.style.setProperty('--accent-color', "{{ clr }}");
+    });
+</script>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="launchapd-content-wrapper">
+    {% for i in range(n) %}
+
+    <div class="launchpad-game-wrapper">
+        <img src="{{ filepaths[i] }}" class="game-img" alt="{{ games[i] }}" style="height: 12em; width: 24em;">
+        <a id="i" href="https://www.chess.com" class="launchpad-game-name">{{ games[i] }}</a>
+    </div>
+    
+    {% endfor %}
+</div>
+
+{% endblock %}

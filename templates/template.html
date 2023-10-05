@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+        
+        <script defer>
+
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('.customize-btn').addEventListener("click", () => {
+                    var r = document.querySelector(':root');
+                    r.style.setProperty('--accent-color', "{{ clr }}");
+                });
+            });
+
+        </script>
+
+        {% block script %} {% endblock %}
+
+    </head>
+
+    <body class="dark">
+        
+        <!-- TOP BAR -->
+        <div class="top-bar-wrapper dark">
+            <div class="top-logo-wrapper top-link-wrapper">
+                <img src="{{ url_for('static', filename='logo/logo#5.png') }}" alt="foo" style="height: 5rem; width: 5rem;">
+            </div>
+
+            {% for tab in tabs %}
+
+            <div class="top-{{ tab.lower() }}-wrapper top-link-wrapper">
+                <a href="/{{ tab.lower() }}" class="top-link">{{ tab }}</a>
+            </div>
+
+            {% endfor %}
+        </div>
+
+        <!-- Main Content -->
+        {% block content %} {% endblock %}
+
+    </body>
+</html>

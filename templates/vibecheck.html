@@ -1,0 +1,41 @@
+{% extends 'template.html' %}
+
+{% block script %}
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        var r = document.querySelector(':root');
+        r.style.setProperty('--accent-color', "{{ clr }}");
+    });
+</script>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="vibe-wrapper">
+
+    <div class="vibe-title">Check Game Compatibility</div>
+    
+    <div class="vibe-instructions-wrapper">
+        <div class="vibe-instructions">To use VibeCheck and check your compatibility with a game, click the "Start" and start playing your game. After finishing, clikc the "End" button to see your results</div>
+    </div>
+
+    <div class="vibe-time-wrapper">
+        <div class="vibe-time-desc">Enter how long you want the VibeCheck to run (in seconds)</div>
+    </div>
+
+    <form class="vibe-btn-wrapper" method="post" action="ml">
+        <div class="vibe-form-inp-wrapper"> <input type="number" class="vibe-time-inp" name="vibe-time"> </div>
+        <div class="vibe-form-inp-wrapper"> <input type="submit" class="vibe-btn" value="Start"> </div>
+    </form>
+
+</div>
+
+{% if score_exists == True %}
+
+<div class="vibe-score-title">Your Compatibility is: {{ score }}%</div>
+
+{% endif %}
+
+{% endblock %}
